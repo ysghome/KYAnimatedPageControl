@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38BA139E1CEF1404006F2744 /* EkuLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA139B1CEF1404006F2744 /* EkuLine.m */; };
+		38BA139F1CEF1404006F2744 /* WRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BA139D1CEF1404006F2744 /* WRProgressView.m */; };
 		5F49CE5C1B26C3BB00C304FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49CE5B1B26C3BB00C304FE /* main.m */; };
 		5F49CE5F1B26C3BB00C304FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49CE5E1B26C3BB00C304FE /* AppDelegate.m */; };
 		5F49CE621B26C3BB00C304FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F49CE611B26C3BB00C304FE /* ViewController.m */; };
@@ -34,6 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38BA139A1CEF1404006F2744 /* EkuLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EkuLine.h; sourceTree = "<group>"; };
+		38BA139B1CEF1404006F2744 /* EkuLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EkuLine.m; sourceTree = "<group>"; };
+		38BA139C1CEF1404006F2744 /* WRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WRProgressView.h; sourceTree = "<group>"; };
+		38BA139D1CEF1404006F2744 /* WRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WRProgressView.m; sourceTree = "<group>"; };
 		5F49CE561B26C3BB00C304FE /* KYAnimatedPageControl-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KYAnimatedPageControl-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F49CE5A1B26C3BB00C304FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F49CE5B1B26C3BB00C304FE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38BA13991CEF1404006F2744 /* EkuLine */ = {
+			isa = PBXGroup;
+			children = (
+				38BA139A1CEF1404006F2744 /* EkuLine.h */,
+				38BA139B1CEF1404006F2744 /* EkuLine.m */,
+				38BA139C1CEF1404006F2744 /* WRProgressView.h */,
+				38BA139D1CEF1404006F2744 /* WRProgressView.m */,
+			);
+			path = EkuLine;
+			sourceTree = "<group>";
+		};
 		5F49CE4D1B26C3BB00C304FE = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +119,7 @@
 		5F49CE581B26C3BB00C304FE /* KYAnimatedPageControl-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				38BA13991CEF1404006F2744 /* EkuLine */,
 				5F49CE5D1B26C3BB00C304FE /* AppDelegate.h */,
 				5F49CE5E1B26C3BB00C304FE /* AppDelegate.m */,
 				5F793B3C1B29965600A77B17 /* DemoCell.h */,
@@ -316,7 +334,9 @@
 				5F793B371B28A1B200A77B17 /* Line.m in Sources */,
 				5F49CE5F1B26C3BB00C304FE /* AppDelegate.m in Sources */,
 				5F49CE5C1B26C3BB00C304FE /* main.m in Sources */,
+				38BA139E1CEF1404006F2744 /* EkuLine.m in Sources */,
 				5F793B2C1B286F5100A77B17 /* KYAnimatedPageControl.m in Sources */,
+				38BA139F1CEF1404006F2744 /* WRProgressView.m in Sources */,
 				5F793B461B2A935E00A77B17 /* Indicator.m in Sources */,
 				5F793B251B28345A00A77B17 /* KYSpringLayerAnimation.m in Sources */,
 				5F793B301B289F2500A77B17 /* GooeyCircle.m in Sources */,

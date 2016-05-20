@@ -26,8 +26,8 @@
         self.selectedPage = 1;
         self.lineHeight = 2.0;
         self.ballDiameter = 10.0;
-        self.unSelectedColor = [UIColor colorWithWhite:0.9 alpha:1];
-        self.selectedColor   = [UIColor redColor];
+        self.unSelectedColor = [UIColor colorWithRed:0.92 green:0.92 blue:0.92 alpha:1.00];
+        self.selectedColor   = [UIColor colorWithRed:0.98 green:0.42 blue:0.46 alpha:1.00];
         self.shouldShowProgressLine = YES;
         self.pageCount = 6;
     }
@@ -116,6 +116,17 @@
     CGContextSetFillColorWithColor(ctx, self.unSelectedColor.CGColor);
     CGContextFillPath(ctx);
     
+    //绘制白色小圆
+    CGMutablePathRef whitePath = CGPathCreateMutable();
+    for (NSInteger i = 0; i < self.pageCount; i++) {
+        CGFloat whiteInterval = 2;
+        CGRect whiteRect = CGRectMake(0 + i * DISTANCE + whiteInterval, self.frame.size.height / 2 - self.ballDiameter / 2 + whiteInterval, self.ballDiameter-whiteInterval*2, self.ballDiameter-whiteInterval*2);
+        CGPathAddEllipseInRect(whitePath, nil, whiteRect);
+    }
+    CGContextAddPath(ctx, whitePath);
+    CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
+    CGContextFillPath(ctx);
+    
     if (self.shouldShowProgressLine == YES) {
         CGContextBeginPath(ctx);
         linePath = CGPathCreateMutable();
@@ -140,6 +151,19 @@
         
         CGContextAddPath(ctx, linePath);
         CGContextSetFillColorWithColor(ctx, self.selectedColor.CGColor);
+        CGContextFillPath(ctx);
+        
+        //绘制白色小圆
+        CGMutablePathRef whitePath = CGPathCreateMutable();
+        for (NSInteger i = 0; i < self.pageCount; i++) {
+            CGFloat whiteInterval = 2;
+            if (i * DISTANCE <= self.selectedLineLength + 0.1) {
+                CGRect whiteRect = CGRectMake(0 + i * DISTANCE + whiteInterval, self.frame.size.height / 2 - self.ballDiameter / 2 + whiteInterval, self.ballDiameter-whiteInterval*2, self.ballDiameter-whiteInterval*2);
+                CGPathAddEllipseInRect(whitePath, nil, whiteRect);
+            }
+        }
+        CGContextAddPath(ctx, whitePath);
+        CGContextSetFillColorWithColor(ctx, [UIColor whiteColor].CGColor);
         CGContextFillPath(ctx);
     }
     
